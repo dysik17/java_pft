@@ -11,7 +11,7 @@ public class Distance {
     this.p2 = Math.pow(y, 2);
   }
   public double area() {
-    return Math.sqrt(p1 + p2);
+    return Math.ceil(Math.sqrt(p1 + p2));
   }
 }
 
