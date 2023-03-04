@@ -1,28 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="ru.stqa.pft.addressbook.GroupCreationTests" tests="1" skipped="0" failures="0" errors="0" timestamp="2023-03-04T17:29:48" hostname="BEST-KOMP" time="1.645">
+<testsuite name="ru.stqa.pft.addressbook.GroupCreationTests" tests="1" skipped="0" failures="0" errors="0" timestamp="2023-03-04T19:03:27" hostname="BEST-KOMP" time="2.139">
   <properties/>
-  <testcase name="testGroupCreation" classname="ru.stqa.pft.addressbook.GroupCreationTests" time="1.645"/>
+  <testcase name="testGroupCreation" classname="ru.stqa.pft.addressbook.GroupCreationTests" time="2.139"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
 SLF4J: Defaulting to no-operation (NOP) logger implementation
 SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
-1677950982817	geckodriver	INFO	Listening on 127.0.0.1:7095
-1677950983123	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "16209" "--remote ... localhost:16209/,http://[::1]:16209/" "-no-remote" "-profile" "C:\\Users\\Admin\\AppData\\Local\\Temp\\rust_mozprofilejGYbKM"
+1677956600144	geckodriver	INFO	Listening on 127.0.0.1:22893
+1677956600558	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "38740" "--remote ... localhost:38740/,http://[::1]:38740/" "-no-remote" "-profile" "C:\\Users\\Admin\\AppData\\Local\\Temp\\rust_mozprofilexcRcG8"
 console.warn: services.settings: Ignoring preference override of remote settings server
 console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
-1677950983961	Marionette	INFO	Marionette enabled
+1677956601711	Marionette	INFO	Marionette enabled
 Dynamically enable window occlusion 0
-1677950983968	Marionette	INFO	Listening on port 60209
-Read port: 60209
-WebDriver BiDi listening on ws://127.0.0.1:16209
-1677950984144	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
-console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Admin\\AppData\\Local\\Temp\\rust_mozprofilejGYbKM\\search.json.mozlz4", (void 0)))
-DevTools listening on ws://127.0.0.1:16209/devtools/browser/4321a808-a91f-4144-b40e-56397faccdb0
+1677956601719	Marionette	INFO	Listening on port 49706
+Read port: 49706
+WebDriver BiDi listening on ws://127.0.0.1:38740
+1677956601919	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Admin\\AppData\\Local\\Temp\\rust_mozprofilexcRcG8\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:38740/devtools/browser/e8a8f040-5de2-4039-bb4c-5921d381e864
 console.warn: LoginRecipes: "Falling back to a synchronous message for: http://localhost."
 console.warn: LoginRecipes: "Falling back to a synchronous message for: http://localhost."
-1677950990683	RemoteAgent	INFO	Perform WebSocket upgrade for incoming connection from 127.0.0.1:60261
-1677950990701	CDP	ERROR	Invalid browser preferences for CDP. Set "fission.webContentIsolationStrategy"to 0 and "fission.bfcacheInParent" to false before Firefox starts.
-1677950990758	Marionette	INFO	Stopped listening on port 60209
+1677956609342	RemoteAgent	INFO	Perform WebSocket upgrade for incoming connection from 127.0.0.1:49763
+1677956609362	CDP	ERROR	Invalid browser preferences for CDP. Set "fission.webContentIsolationStrategy"to 0 and "fission.bfcacheInParent" to false before Firefox starts.
+1677956609430	Marionette	INFO	Stopped listening on port 49706
 Dynamically enable window occlusion 1
 WARNING: A blocker encountered an error while we were waiting.
           Blocker:  Waiting for ping task
