@@ -7,7 +7,7 @@ public class ContactCreationTests extends TestBaseContact {
   @Test
   public void testContactCreation() throws Exception {
     gotoNewCreationContactPage();
-    fillContactForm(new ContactData("Ivan", "Ivanov", "Moscow", "654321", "89103749595", "321@mail.ru"));
+    fillContactForm(new ContactData("Ira", "Ipatova", "Perm", "45468", "897815", "1@mail.ru"));
     submitContactCreation();
     returnToContactPage();
     logOutOfTheSystem();
