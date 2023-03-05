@@ -2,7 +2,7 @@ package ru.stqa.pft.addressbook;
 
 import org.testng.annotations.Test;
 
-public class ContactCreationTests extends testBaseContact {
+public class ContactCreationTests extends TestBaseContact {
 
   @Test
   public void testContactCreation() throws Exception {
