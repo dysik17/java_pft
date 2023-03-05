@@ -6,7 +6,7 @@ public class ContactDeletionTests extends  TestBaseContact {
 
   @Test
   public void testContactDeletion() throws Exception {
-    appContact.DeleteContact();
-    appContact.returnToHome();
+    appContact.getContactHelper().DeleteContact();
+    appContact.getNavigationContact().returnToHome();
   }
 }
