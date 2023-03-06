@@ -35,4 +35,12 @@ public class ContactHelper extends ContactBase {
     click(By.xpath("//img[@alt='Edit']"));
     click(By.xpath("//div[@id='content']/form[2]/input[2]"));
   }
+
+  public void selectContactModification() {
+    click(By.xpath("//img[@alt='Edit']"));
+  }
+
+  public void updateContactModification() {
+    click(By.xpath("//div[@id='content']/form/input[22]"));
+  }
 }
