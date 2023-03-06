@@ -3,14 +3,12 @@ package ru.stqa.pft.addressbook.appmanager;
 import org.openqa.selenium.By;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
-public class NavigationContact {
-  private FirefoxDriver wd;
-
+public class NavigationContact extends HelperBase{
   public NavigationContact(FirefoxDriver wd) {
-    this.wd = wd;
+    super(wd);
   }
 
   public void returnToHome() {
-    wd.findElement(By.linkText("home")).click();
+    click(By.linkText("home"));
   }
 }

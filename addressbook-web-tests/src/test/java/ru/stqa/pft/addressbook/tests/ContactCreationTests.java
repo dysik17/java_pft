@@ -8,7 +8,7 @@ public class ContactCreationTests extends TestBaseContact {
   @Test
   public void testContactCreation() throws Exception {
     appContact.getContactHelper().gotoNewCreationContactPage();
-    appContact.getContactHelper().fillContactForm(new ContactData("Grisha", "Pibov", "SPb", "458963", "89589654763", "Yalta123@mail.ru"));
+    appContact.getContactHelper().fillContactForm(new ContactData("Slava", "Rakov", "Moscow", "154236", "82569853621", "00123@mail.ru"));
     appContact.getContactHelper().submitContactCreation();
     appContact.getContactHelper().returnToContactPage();
     appContact.logOutOfTheSystem();
