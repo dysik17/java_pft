@@ -1,10 +1,10 @@
 package ru.stqa.pft.addressbook.appmanager;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.WebDriver;
 
 public class SessionHelperContact extends HelperBase{
-  public SessionHelperContact(FirefoxDriver wd) {
+  public SessionHelperContact(WebDriver wd) {
     super(wd);
   }
   public void login(String username, String password) {
