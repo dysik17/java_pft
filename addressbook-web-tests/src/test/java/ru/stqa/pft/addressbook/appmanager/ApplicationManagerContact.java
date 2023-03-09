@@ -16,6 +16,7 @@ public class ApplicationManagerContact {
   private ContactHelper contactHelper;
   private String browser;
 
+
   public ApplicationManagerContact(String browser) {
     this.browser = browser;
   }
