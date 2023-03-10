@@ -26,6 +26,7 @@ public class HelperBase {
     }
   }
 
+  //проверка наличия диалогового окна, безопасно перехватить исключения
   public boolean isAlertPresent(){
     try{
       wd.switchTo().alert();
@@ -36,3 +37,5 @@ public class HelperBase {
     }
   }
 }
+
+

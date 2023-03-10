@@ -39,7 +39,7 @@ public class ApplicationManager {
     }
 
     //Group
-    wd.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+    wd.manage().timeouts().implicitlyWait(0, TimeUnit.SECONDS);
     wd.get("http://localhost/addressbook/group.php");
     groupHelper = new GroupHelper(wd);
     navigationHelper = new NavigationHelper(wd);
@@ -55,9 +55,11 @@ public class ApplicationManager {
     } else if (browser.equals(BrowserType.IE)) {
       wd = new InternetExplorerDriver();
     }
+
     //Contact
-    wd.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+    wd.manage().timeouts().implicitlyWait(0, TimeUnit.SECONDS);
     wd.get("http://localhost/addressbook/");
+    groupHelper = new GroupHelper(wd);
     contactHelper = new ContactHelper(wd);
     navigationContact = new NavigationContact(wd);
     sessionHelperContact = new SessionHelperContact(wd);

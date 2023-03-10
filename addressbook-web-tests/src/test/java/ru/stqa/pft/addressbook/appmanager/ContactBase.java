@@ -37,12 +37,13 @@ public class ContactBase {
     }
   }
 
-  public boolean isElementPresent(By by) {
-    try {
-      wd.findElement(by);
-      return true;
-    } catch (NoSuchElementException e) {
-      return false;
+  //проверка наличия/отсутсвия элемента
+  public boolean isElementPresent(By locator) {
+      try {
+        wd.findElement(locator);
+        return true;
+      } catch (NoSuchElementException e) {
+        return false;
+      }
     }
-  }
 }
