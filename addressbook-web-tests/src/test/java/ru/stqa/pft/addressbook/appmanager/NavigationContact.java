@@ -9,6 +9,9 @@ public class NavigationContact extends HelperBase{
   }
 
   public void returnToHome() {
+    if (isElementPresent(By.id("maintable"))) {
+      return;
+    }
     click(By.linkText("home"));
   }
 }
