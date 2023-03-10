@@ -3,7 +3,7 @@ package ru.stqa.pft.addressbook.appmanager;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
-public class SessionHelperContact extends HelperBase{
+public class SessionHelperContact extends ContactBase{
   public SessionHelperContact(WebDriver wd) {
     super(wd);
   }

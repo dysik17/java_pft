@@ -19,12 +19,12 @@ public class ContactHelper extends ContactBase {
   }
 
   public void fillContactForm(ContactData contactData) {
-    type(By.name("firstname"), contactData.firstName());
-    type(By.name("lastname"), contactData.lastName());
-    type(By.name("address"), contactData.address());
-    type(By.name("home"), contactData.telephoneHome());
-    type(By.name("mobile"), contactData.telephoneMobile());
-    type(By.name("email"), contactData.email());
+    type(By.name("firstname"), contactData.getFirstName());
+    type(By.name("lastname"), contactData.getLastName());
+    type(By.name("address"), contactData.getAddress());
+    type(By.name("home"), contactData.getTelephoneHome());
+    type(By.name("mobile"), contactData.getTelephoneMobile());
+    type(By.name("email"), contactData.getEmail());
   }
 
   public void gotoNewCreationContactPage() {
@@ -43,4 +43,16 @@ public class ContactHelper extends ContactBase {
   public void updateContactModification() {
     click(By.xpath("//div[@id='content']/form/input[22]"));
   }
+
+  public void createContact(ContactData contact) {
+    fillContactForm(contact);
+    submitContactCreation();
+    returnToContactPage();
+  }
+
+
+  public boolean isThereAContact() {
+    return isElementPresent(By.linkText("home page"));
+  }
+
 }
