@@ -45,4 +45,8 @@ public class GroupHelper extends HelperBase {
   public void updateGroupModification() {
     click(By.name("update"));
   }
+
+  public void gotoHomePage() {
+    click(By.linkText("home"));
+  }
 }
