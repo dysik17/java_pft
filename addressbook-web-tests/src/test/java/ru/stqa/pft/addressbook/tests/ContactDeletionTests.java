@@ -16,6 +16,6 @@ public class ContactDeletionTests extends  TestBaseContact {
     app.getContactHelper().DeleteContact();
     app.getNavigationContact().returnToHome();
     int after = app.getGroupHelper().getGroupCount();
-    Assert.assertEquals(after, before + 1);
+    Assert.assertEquals(after, before - 1);
   }
 }
