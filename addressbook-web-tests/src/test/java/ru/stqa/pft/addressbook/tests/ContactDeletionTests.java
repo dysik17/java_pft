@@ -8,8 +8,8 @@ public class ContactDeletionTests extends  TestBaseContact {
 
   @Test
   public void testContactDeletion() throws Exception {
-    int before = app.getGroupHelper().getGroupCount();
     app.getContactHelper().gotoNewCreationContactPage();
+    int before = app.getGroupHelper().getGroupCount();
     if (! app.getContactHelper().isThereAContact()) {
       app.getContactHelper().createContact(new ContactData("Marina", "Fadeeva", "Kostroma", "56321", "89879567896", "MarinaF@mail.ru", "Testik1"));
     }
