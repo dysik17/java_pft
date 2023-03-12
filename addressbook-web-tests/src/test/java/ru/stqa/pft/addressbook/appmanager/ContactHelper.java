@@ -55,4 +55,7 @@ public class ContactHelper extends ContactBase {
     return isElementPresent(By.linkText("home page"));
   }
 
+  public int getContactCount() {
+    return wd.findElements(By.name("selected[]")).size();
+  }
 }

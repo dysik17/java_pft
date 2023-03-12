@@ -34,14 +34,12 @@ public class GroupHelper extends HelperBase {
     click(By.name("delete"));
   }
 
-  public void selectGroup() {
-    click(By.name("selected[]"));
-  }
-
   public void editGroupModification() {
     click(By.name("edit"));
   }
-
+  public void selectGroup() {
+    click(By.name("selected[]"));
+  }
   public void updateGroupModification() {
     click(By.name("update"));
   }
@@ -57,7 +55,12 @@ public class GroupHelper extends HelperBase {
     returnToGroupPage();
   }
 
+
   public boolean isThereAGroup() {
     return isElementPresent(By.name("selected[]"));
+  }
+
+  public int getGroupCount() {
+    return wd.findElements(By.name("selected[]")).size();
   }
 }
