@@ -37,8 +37,8 @@ public class GroupHelper extends HelperBase {
   public void editGroupModification() {
     click(By.name("edit"));
   }
-  public void selectGroup() {
-    click(By.name("selected[]"));
+  public void selectGroup(int index) {
+    wd.findElements(By.name("selected[]")).get(index).click();
   }
   public void updateGroupModification() {
     click(By.name("update"));

@@ -32,12 +32,11 @@ public class ContactHelper extends ContactBase {
   }
 
   public void DeleteContact() {
-    click(By.xpath("//img[@alt='Edit']"));
     click(By.xpath("//div[@id='content']/form[2]/input[2]"));
   }
 
-  public void selectContactModification() {
-    click(By.xpath("//img[@alt='Edit']"));
+  public void selectContactModification(int index) {
+    wd.findElements(By.xpath("//img[@alt='Edit']")).get(index).click();
   }
 
   public void updateContactModification() {
