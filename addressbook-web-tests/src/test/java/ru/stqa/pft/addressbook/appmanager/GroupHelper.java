@@ -52,7 +52,7 @@ public class GroupHelper extends HelperBase {
     initGroupCreation();
     fillGroupForm(group);
     submitGroup();
-    returnToGroupPage();
+    submitGroupCreation();
   }
 
 
