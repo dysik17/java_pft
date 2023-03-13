@@ -25,6 +25,7 @@ public class ContactHelper extends HelperBase {
     type(By.name("home"), contactData.getTelephoneHome());
     type(By.name("mobile"), contactData.getTelephoneMobile());
     type(By.name("email"), contactData.getEmail());
+    type(By.name("new_group"), ContactData.getGroup());
   }
 
   public void gotoNewCreationContactPage() {
@@ -43,7 +44,7 @@ public class ContactHelper extends HelperBase {
     click(By.xpath("//div[@id='content']/form/input[22]"));
   }
 
-  public void createContact(ContactData contact) {
+  public void createContact(ContactData contact, boolean b) {
     fillContactForm(contact);
     submitContactCreation();
     returnToContactPage();
