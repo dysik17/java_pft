@@ -4,7 +4,7 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 import ru.stqa.pft.addressbook.model.ContactData;
 
-public class ContactModificationTests extends TestBaseContact {
+public class ContactModificationTests extends TestBase{
   @Test
   public void testContactModification() {
     app.getContactHelper().gotoNewCreationContactPage();

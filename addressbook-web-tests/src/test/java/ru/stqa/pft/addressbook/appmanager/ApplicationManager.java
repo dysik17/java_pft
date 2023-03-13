@@ -20,8 +20,6 @@ public class ApplicationManager {
   private GroupHelper groupHelper;
 
   //Contact
-  private SessionHelperContact sessionHelperContact;
-  private NavigationContact navigationContact;
   private ContactHelper contactHelper;
 
 
@@ -45,25 +43,7 @@ public class ApplicationManager {
     navigationHelper = new NavigationHelper(wd);
     sessionHelper = new SessionHelper(wd);
     sessionHelper.login("admin", "secret");
-  }
-
-  public void initContact(){
-    if (browser.equals(BrowserType.FIREFOX)) {
-      wd = new FirefoxDriver();
-    } else if (browser.equals(BrowserType.CHROME)){
-      wd = new ChromeDriver();
-    } else if (browser.equals(BrowserType.IE)) {
-      wd = new InternetExplorerDriver();
-    }
-
-    //Contact
-    wd.manage().timeouts().implicitlyWait(0, TimeUnit.SECONDS);
-    wd.get("http://localhost/addressbook/");
-    groupHelper = new GroupHelper(wd);
     contactHelper = new ContactHelper(wd);
-    navigationContact = new NavigationContact(wd);
-    sessionHelperContact = new SessionHelperContact(wd);
-    sessionHelperContact.login("admin", "secret");
   }
 
   public void logOutOfTheSystem() {
@@ -88,8 +68,4 @@ public class ApplicationManager {
     return navigationHelper;
   }
 
-  //NavigationHelperContact
-  public NavigationContact getNavigationContact() {
-    return navigationContact;
-  }
 }

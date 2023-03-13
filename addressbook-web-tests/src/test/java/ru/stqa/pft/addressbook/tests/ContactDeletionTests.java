@@ -4,7 +4,7 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 import ru.stqa.pft.addressbook.model.ContactData;
 
-public class ContactDeletionTests extends  TestBaseContact {
+public class ContactDeletionTests extends  TestBase{
 
   @Test
   public void testContactDeletion() throws Exception {
@@ -15,7 +15,7 @@ public class ContactDeletionTests extends  TestBaseContact {
     int before = app.getContactHelper().getContactCount();
     app.getContactHelper().selectContactModification(before - 1);
     app.getContactHelper().DeleteContact();
-    app.getNavigationContact().returnToHome();
+    app.getNavigationHelper().returnToHome();
     int after = app.getContactHelper().getContactCount();
     Assert.assertEquals(after, before - 1);
   }
