@@ -4,7 +4,7 @@ import java.util.Objects;
 
 public class ContactData {
 
-  private final String id;
+  private int id;
   private final String firstName;
   private final String lastName;
   private final String address;
@@ -14,7 +14,7 @@ public class ContactData {
 
   public ContactData(String firstName, String lastName, String address, String telephoneHome,
                      String telephoneMobile, String email) {
-    this.id = null;
+    this.id = 0;
     this.firstName = firstName;
     this.lastName = lastName;
     this.address = address;
@@ -23,7 +23,7 @@ public class ContactData {
     this.email = email;
   }
 
-  public ContactData(String id, String firstName, String lastName, String address, String telephoneHome,
+  public ContactData(int id, String firstName, String lastName, String address, String telephoneHome,
                      String telephoneMobile, String email) {
     this.id = id;
     this.firstName = firstName;
@@ -34,7 +34,7 @@ public class ContactData {
     this.email = email;
   }
 
-  public String getId() {
+  public int getId() {
     return id;
   }
 
@@ -62,6 +62,9 @@ public class ContactData {
     return email;
   }
 
+  public void setId(int id) {
+    this.id = id;
+  }
 
   @Override
   public String toString() {
@@ -79,14 +82,14 @@ public class ContactData {
 
     ContactData that = (ContactData) o;
 
-    if (!Objects.equals(id, that.id)) return false;
+    if (id != that.id) return false;
     if (!Objects.equals(firstName, that.firstName)) return false;
     return Objects.equals(lastName, that.lastName);
   }
 
   @Override
   public int hashCode() {
-    int result = id != null ? id.hashCode() : 0;
+    int result = id;
     result = 31 * result + (firstName != null ? firstName.hashCode() : 0);
     result = 31 * result + (lastName != null ? lastName.hashCode() : 0);
     return result;
