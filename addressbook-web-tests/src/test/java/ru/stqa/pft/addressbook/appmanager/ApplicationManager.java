@@ -53,7 +53,7 @@ public class ApplicationManager {
   }
 
   //GroupHelper
-  public GroupHelper getGroupHelper() {
+  public GroupHelper group() {
     return groupHelper;
   }
 
@@ -63,7 +63,7 @@ public class ApplicationManager {
   }
 
   //NavigationHelperGroup
-  public NavigationHelper getNavigationHelper() {
+  public NavigationHelper goTo() {
     return navigationHelper;
   }
 
