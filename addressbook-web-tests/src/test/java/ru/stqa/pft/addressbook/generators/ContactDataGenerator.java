@@ -20,11 +20,6 @@ public class ContactDataGenerator {
   @Parameter(names = "-f", description = "Target file")
   public String file;
 
-  private void run() throws IOException {
-    List<ContactData> contacts = generateContacts(count);
-    save(contacts, new File(file));
-  }
-
   public static void main(String[] args) throws IOException {
     ContactDataGenerator generator = new ContactDataGenerator();
     JCommander jCommander = new JCommander(generator);
@@ -35,6 +30,11 @@ public class ContactDataGenerator {
       return;
     }
     generator.run();
+  }
+
+  private void run() throws IOException {
+    List<ContactData> contacts = generateContacts(count);
+    save(contacts, new File(file));
   }
 
   //сохранение данных в файл
