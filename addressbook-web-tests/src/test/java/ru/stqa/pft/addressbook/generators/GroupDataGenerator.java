@@ -22,7 +22,6 @@ public class GroupDataGenerator {
   @Parameter(names = "-f", description = "Target file")
   public String file;
 
-
   public static void main(String[] args) throws IOException {
     GroupDataGenerator generator = new GroupDataGenerator();
     JCommander jCommander = new JCommander(generator);
