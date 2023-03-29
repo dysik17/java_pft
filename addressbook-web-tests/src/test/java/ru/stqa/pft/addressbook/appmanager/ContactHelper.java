@@ -75,6 +75,7 @@ public class ContactHelper extends HelperBase {
     selectContactById(contact.getId());
     deleteContact();
     wd.switchTo().alert().accept();
+    wd.findElement(By.cssSelector("div.msgbox"));
     contactCashe = null;
   }
 
