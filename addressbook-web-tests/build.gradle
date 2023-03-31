@@ -16,6 +16,14 @@ dependencies {
     implementation 'com.beust:jcommander:1.48.'
     implementation 'com.thoughtworks.xstream:xstream:1.4.20'
     implementation 'com.google.code.gson:gson:2.10.1'
+    implementation 'ch.qos.logback:logback-classic:1.4.6'
+
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.1'
+    testImplementation 'junit:junit:4.13.1'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.1'
+
+    implementation 'mysql:mysql-connector-java:8.0.32'
+    implementation 'org.hibernate:hibernate-core:6.2.0.Final'
 }
 
 task testContacts (type: Test) {
