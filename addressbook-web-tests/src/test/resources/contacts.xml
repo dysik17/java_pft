@@ -1,18 +1,38 @@
 <list>
   <contacts>
-    <firstName>firstname 0</firstName>
-    <lastName>lastname 0</lastName>
-    <address>address 0</address>
-    <telephoneHome>telephoneHome 0</telephoneHome>
-    <telephoneMobile>telephoneMobile 0</telephoneMobile>
-    <email>email 0</email>
+    <firstName>firstname0</firstName>
+    <lastName>lastname0</lastName>
+    <address>address0</address>
+    <telephoneHome>telephoneHome0</telephoneHome>
+    <telephoneMobile>telephoneMobile0</telephoneMobile>
+    <email>email0</email>
+    <groups/>
   </contacts>
   <contacts>
-    <firstName>firstname 1</firstName>
-    <lastName>lastname 1</lastName>
-    <address>address 1</address>
-    <telephoneHome>telephoneHome 1</telephoneHome>
-    <telephoneMobile>telephoneMobile 1</telephoneMobile>
-    <email>email 1</email>
+    <firstName>firstname1</firstName>
+    <lastName>lastname1</lastName>
+    <address>address1</address>
+    <telephoneHome>telephoneHome1</telephoneHome>
+    <telephoneMobile>telephoneMobile1</telephoneMobile>
+    <email>email1</email>
+    <groups/>
+  </contacts>
+  <contacts>
+    <firstName>firstname2</firstName>
+    <lastName>lastname2</lastName>
+    <address>address2</address>
+    <telephoneHome>telephoneHome2</telephoneHome>
+    <telephoneMobile>telephoneMobile2</telephoneMobile>
+    <email>email2</email>
+    <groups/>
+  </contacts>
+  <contacts>
+    <firstName>firstname3</firstName>
+    <lastName>lastname3</lastName>
+    <address>address3</address>
+    <telephoneHome>telephoneHome3</telephoneHome>
+    <telephoneMobile>telephoneMobile3</telephoneMobile>
+    <email>email3</email>
+    <groups/>
   </contacts>
 </list>

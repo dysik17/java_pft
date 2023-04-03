@@ -3,6 +3,8 @@ package ru.stqa.pft.addressbook.appmanager;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.Select;
+import org.testng.Assert;
 import ru.stqa.pft.addressbook.model.ContactData;
 import ru.stqa.pft.addressbook.model.Contacts;
 
@@ -24,13 +26,47 @@ public class ContactHelper extends HelperBase {
     click(By.xpath("//input[21]"));
   }
 
-  public void fillContactForm(ContactData contactData) {
+  public void fillContactForm(ContactData contactData, boolean creation) {
     type(By.name("firstname"), contactData.getFirstName());
     type(By.name("lastname"), contactData.getLastName());
     type(By.name("address"), contactData.getAddress());
     type(By.name("home"), contactData.getTelephoneHome());
     type(By.name("mobile"), contactData.getTelephoneMobile());
     type(By.name("email"), contactData.getEmail());
+
+  }
+
+  public void fillContactForm2(ContactData contactData, boolean creation) {
+    type(By.name("firstname"), contactData.getFirstName());
+    type(By.name("lastname"), contactData.getLastName());
+    type(By.name("address"), contactData.getAddress());
+    type(By.name("home"), contactData.getTelephoneHome());
+    type(By.name("mobile"), contactData.getTelephoneMobile());
+    type(By.name("email"), contactData.getEmail());
+
+    if (creation) {
+      if (contactData.getGroups().size() > 0) {
+        Assert.assertTrue(contactData.getGroups().size() == 1);
+        new Select(wd.findElement(By.name("new_group"))).selectByVisibleText(contactData.getGroups().iterator().next().getName());
+      } else {
+        Assert.assertFalse(isElementPresent(By.name("new_group")));
+      }
+    }
+  }
+
+  //выбор группы
+  public void groupSelection(int id) {
+    wd.findElement(By.cssSelector(String.format("select[name='group']option[value='%s']",id))).click();
+  }
+
+  //выбор пользователя
+  public void contactSelection(int id) {
+    WebElement checkbox = wd.findElement(By.cssSelector(String.format("input[value='%s']", id)));
+  }
+
+  //нажатие кнопки удалить из группы
+  public void removeFromGroup() {
+    click(By.name("remove"));
   }
 
   public void creationPage() {
@@ -57,14 +93,14 @@ public class ContactHelper extends HelperBase {
   }
 
   public void create(ContactData contact) {
-    fillContactForm(contact);
+    fillContactForm(contact, true);
     submitContactCreation();
     returnToContactPage();
     contactCashe = null;
   }
   public void modify(ContactData contact) {
     editContactById(contact.getId());
-    fillContactForm(contact);
+    fillContactForm(contact, true);
     updateContactModification();
     returnToContactPage();
     contactCashe = null;
@@ -76,6 +112,21 @@ public class ContactHelper extends HelperBase {
     wd.switchTo().alert().accept();
     wd.findElement(By.cssSelector("div.msgbox"));
     contactCashe = null;
+  }
+
+  public void deletingGroupFromContact(ContactData contactData, boolean deletion) {
+    groupSelection(contactData.getId()); //выбор группы
+    contactSelection(contactData.getId()); //выбор пользователя
+    removeFromGroup();
+
+    if (deletion) {
+      if (contactData.getGroups().size() > 0) {
+        Assert.assertTrue(contactData.getGroups().size() == 1);
+        new Select(wd.findElement(By.name("new_group"))).selectByVisibleText(contactData.getGroups().iterator().next().getName());
+      } else {
+        Assert.assertFalse(isElementPresent(By.name("new_group")));
+      }
+    }
   }
 
   private void initContactModificationById(int id) {
@@ -139,5 +190,4 @@ public class ContactHelper extends HelperBase {
     return new ContactData().withId(contact.getId()).withFirstName(firstname).withLastName(lastname)
             .withAddress(address).withTelephoneHome(home).withTelephoneMobile(mobile).withEmail(email);
   }
-
 }

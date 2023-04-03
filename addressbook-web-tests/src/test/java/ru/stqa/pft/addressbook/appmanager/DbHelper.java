@@ -11,12 +11,15 @@ import ru.stqa.pft.addressbook.model.GroupData;
 import ru.stqa.pft.addressbook.model.Groups;
 
 import java.util.List;
+import java.util.Properties;
 
 public class DbHelper {
 
   private final SessionFactory sessionFactory;
+  private final Properties properties;
 
-  public DbHelper() {
+  public DbHelper(Properties properties) {
+    this.properties = properties;
     // A SessionFactory is set up once for an application!
     final StandardServiceRegistry registry = new StandardServiceRegistryBuilder()
             .configure() // configures settings from hibernate.cfg.xml
@@ -41,4 +44,5 @@ public class DbHelper {
     session.close();
     return new Contacts(result);
   }
+
 }

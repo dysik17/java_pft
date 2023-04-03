@@ -64,17 +64,6 @@ public class ContactCreationTests extends TestBase{
     assertThat(app.contact().count(), equalTo(before.size() + 1));
     assertThat(after, equalTo(
             before.withAdded(contact.withId(after.stream().mapToInt((c) -> c.getId()).max().getAsInt()))));
-    }
-
-  @Test (enabled = false)
-  public void testBadContactCreation() throws Exception {
-    Contacts before = app.db().contacts();
-    app.contact().creationPage();
-    ContactData contact = new ContactData().withFirstName("Marina'").withLastName("Tverdova").withAddress("Moscow").withTelephoneHome("485962").withTelephoneMobile("891590302").withEmail("MarinaT@mail.ru");
-    app.contact().create(contact);
-    assertThat(app.contact().count(), equalTo(before.size()));
-    Contacts after = app.db().contacts();
-    assertThat(after, equalTo(before));
     verifyContactListInUI();
   }
 }
