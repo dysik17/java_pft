@@ -1,9 +1,18 @@
 package ru.stqa.pft.sandbox;
 
 public class Point {
-  public static void main(String[] args){
+  public double x;
+  public double y;
 
-    Distance d = new Distance(2.0, 5.0, 4.0, 8.0);
-    System.out.println("Расстояние между двумя точками =  " + d.area());
+  public Point(double x, double y) {
+    this.x = x;
+    this.y = y;
+  }
+  public double distance(Point other) {
+    double xdif = this.x - other.x;
+    double ydif = this.y - other.y;
+    return Math.sqrt(Math.pow(xdif, 2) + Math.pow(ydif, 2));
   }
 }
+
+
