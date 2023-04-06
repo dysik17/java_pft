@@ -4,6 +4,7 @@ import org.apache.commons.net.telnet.TelnetClient;
 import ru.stqa.pft.mantis.model.MailMessage;
 
 import javax.mail.*;
+import javax.mail.MessagingException;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.PrintStream;
