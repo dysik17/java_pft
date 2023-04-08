@@ -1,19 +1,28 @@
-plugins {
-    id 'java'
+buildscript{
+    repositories{
+        gradlePluginPortal()
+    }
+    dependencies {
+        classpath 'com.yupzip:wsdl2java:2.3.2'
+    }
 }
 
-group 'org.example'
-version '1.0-SNAPSHOT'
+apply plugin: 'java'
+apply plugin: 'com.yupzip.wsdl2java'
+
 
 repositories {
     mavenCentral()
 }
-
 dependencies {
-    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.1'
-    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.1'
+    implementation 'org.testng:testng:7.6.1'
+
 }
 
-test {
-    useJUnitPlatform()
+wsdl2java {
+    generatedWsdlDir = file("src/main/java")
+    wsdlDir = file("src/main/resources")
+    wsdlsToGenerate = [
+            ['src/main/resources/geoipservice.wsdl']
+    ]
 }
