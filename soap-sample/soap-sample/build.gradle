@@ -20,9 +20,8 @@ dependencies {
 }
 
 wsdl2java {
-    generatedWsdlDir = file("src/main/java")
     wsdlDir = file("src/main/resources")
     wsdlsToGenerate = [
-            ['src/main/resources/geoipservice.wsdl']
+            ["$projectDir/src/main/resources/geoipservice.wsdl"]
     ]
 }
