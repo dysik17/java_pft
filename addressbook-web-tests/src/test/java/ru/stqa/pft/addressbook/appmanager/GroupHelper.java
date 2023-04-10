@@ -38,6 +38,11 @@ public class GroupHelper extends HelperBase {
     click(By.name("delete"));
   }
 
+  public void selectGroup() {
+    click(By.name("group"));
+    wd.findElements(By.cssSelector("[name='group'] option")).;
+  }
+
   public void initGroupModification() {
     click(By.name("edit"));
   }

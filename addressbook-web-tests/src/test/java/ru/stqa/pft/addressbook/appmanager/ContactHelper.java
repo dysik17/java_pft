@@ -7,6 +7,7 @@ import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
 import ru.stqa.pft.addressbook.model.ContactData;
 import ru.stqa.pft.addressbook.model.Contacts;
+import ru.stqa.pft.addressbook.model.GroupData;
 
 import java.util.HashSet;
 import java.util.List;
@@ -189,5 +190,37 @@ public class ContactHelper extends HelperBase {
     wd.navigate().back();
     return new ContactData().withId(contact.getId()).withFirstName(firstname).withLastName(lastname)
             .withAddress(address).withTelephoneHome(home).withTelephoneMobile(mobile).withEmail(email);
+  }
+
+  //____________________ Работа с группами и контактами _________________
+
+  public void addToGroup(ContactData contact, GroupData group) {
+    selectContactById(contact.getId());
+    selectGroup(group.getName());
+    add();
+    System.out.println("Контакт добавлен в группу с именем " + group.getName());
+  }
+
+  public void removeFromGroup(ContactData contact, GroupData group) {
+    selectDeletedGroup(group.getName());
+    selectContactById(contact.getId());
+    remove();
+    System.out.println("Контакт удален из группы с именем " + group.getName());
+  }
+
+  private void selectGroup(String groupName) {
+    new Select(wd.findElement(By.name("to_group"))).selectByVisibleText(groupName);
+  }
+
+  private void add() {
+    click(By.cssSelector("[value='Add to']"));
+  }
+
+  private void selectDeletedGroup(String groupName) {
+    new Select(wd.findElement(By.name("group"))).selectByVisibleText(groupName);
+  }
+
+  private void remove() {
+    click(By.name("remove"));
   }
 }
