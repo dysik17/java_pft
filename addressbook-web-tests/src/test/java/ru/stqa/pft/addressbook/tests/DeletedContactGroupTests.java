@@ -1,7 +1,7 @@
 package ru.stqa.pft.addressbook.tests;
 
-import org.junit.Test;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Test;
 import ru.stqa.pft.addressbook.model.ContactData;
 import ru.stqa.pft.addressbook.model.GroupData;
 import ru.stqa.pft.addressbook.model.Groups;
@@ -29,8 +29,6 @@ public class DeletedContactGroupTests extends TestBase{
       createGroup(newGroup);
     }
   }
-
-
 
   @Test
   public void testDeleteGroups() {
