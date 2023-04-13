@@ -63,21 +63,6 @@ public class ApplicationManager {
     return ftp;
   }
 
-  public WebDriver getDriver() {
-    if (wd == null) {
-      if (browser.equals(BrowserType.FIREFOX)) {
-        wd = new FirefoxDriver();
-      } else if (browser.equals(BrowserType.CHROME)) {
-        wd = new ChromeDriver();
-      } else if (browser.equals(BrowserType.IE)) {
-        wd = new InternetExplorerDriver();
-      }
-      wd.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
-      wd.get(properties.getProperty("web.baseUrl"));
-    }
-    return wd;
-  }
-
   public MailHelper mail() {
     if (mailHelper == null) {
       mailHelper = new MailHelper(this);
@@ -111,6 +96,21 @@ public class ApplicationManager {
       soapHelper = new SoapHelper(this);
     }
     return soapHelper;
+  }
+
+  public WebDriver getDriver() {
+    if (wd == null) {
+      if (browser.equals(BrowserType.FIREFOX)) {
+        wd = new FirefoxDriver();
+      } else if (browser.equals(BrowserType.CHROME)) {
+        wd = new ChromeDriver();
+      } else if (browser.equals(BrowserType.IE)) {
+        wd = new InternetExplorerDriver();
+      }
+      wd.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
+      wd.get(properties.getProperty("web.baseUrl"));
+    }
+    return wd;
   }
 }
 

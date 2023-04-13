@@ -22,7 +22,17 @@ public class SoapTests extends TestBase{
   }
 
   @Test
-  public void testCreateIsuue() throws MalformedURLException, ServiceException, RemoteException {
+  public void testCreateIssue() throws MalformedURLException, ServiceException, RemoteException {
+    Set<Project> projects = app.soap().getProjects();
+    Issue issue = new Issue().withtSummary("Test issue")
+            .withDescription("Test issue description").withProject(projects.iterator().next());
+    Issue created = app.soap().addIssue(issue);
+    Assert.assertEquals(issue.getSummary(), created.getSummary());
+  }
+
+  @Test
+  public void testStatusIssue() throws MalformedURLException, ServiceException, RemoteException {
+    skipIfNotFixed(1);
     Set<Project> projects = app.soap().getProjects();
     Issue issue = new Issue().withtSummary("Test issue")
             .withDescription("Test issue description").withProject(projects.iterator().next());
