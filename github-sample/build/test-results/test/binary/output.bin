@@ -1,0 +1,266 @@
+Задание 20
+RestAssuredTests и RestTests
+Задание 19
+&Задание 18 и Задани 19
+Delete src directory
+*Delete soap-sample/soap-sample directory
+Delete settings.gradle
+Delete gradlew.bat
+Delete gradlew
+Delete build.gradle
+IDelete mantis-tests/src/test/java/ru/stqa/pft/mantis/out/test directory
+ODelete mantis-tests/src/test/java/ru/stqa/pft/mantis/gradle/wrapper directory
+IDelete mantis-tests/src/test/java/ru/stqa/pft/mantis/src/test directory
+aDelete mantis-tests/src/test/java/ru/stqa/pft/mantis/src/test/java/ru/stqa/pft/mantis directory
+jDelete mantis-tests/src/test/java/ru/stqa/pft/mantis/src/test/java/ru/stqa/pft/mantis/src/test directory
+�Delete mantis-tests/src/test/java/ru/stqa/pft/mantis/src/test/java/ru/stqa/pft/mantis/src/test/java/ru/stqa/pft/mantis directory
+gDelete mantis-tests/src/test/java/ru/stqa/pft/mantis/src/test/java/ru/stqa/pft/mantis/tests directory
+FDelete mantis-tests/src/test/java/ru/stqa/pft/mantis/tests directory
+Задание 19
+Задание 18
+'Задание 19 (с ошибкой)
+59.3. SOAP: взаимодействие с MantisBT
+'9.2 SOAP: простой пример
+Задание 16
+HЗадание 16, Удаление контакта из группы
+SOAP
+#SOAP: простой пример
+9Не запускается в консоли wsdl2java
+9.2
+
+SOAP
+#№18 RegistrationTestsJamesHelper
+
+bЗадание №18: Реализовать тест для смены пароля в MantisBT
+ADelete addressbook-web-tests/gradle/wrapper/resources directory
+TDelete addressbook-web-tests/gradle/wrapper/java/ru/stqa/pft/addressbook directory
+Delete Distance.java
+Delete TestNG.java
+Задание 3, PointTests
+
+yЗадание №3: Подключить тестовый фреймворк и сделать первые тесты
+Задание 2, PointTests
+
+�Задание №2: Потренироваться использовать функции, классы, объекты и методы
+)8.6 RegistrationTests (testRegistration)
+
+eПолучение почты на встроенный в тесты почтовый сервер
+LoginTests
+8.6 MailMessage
+
+eПолучение почты на встроенный в тесты почтовый сервер
+Задание 17, MantisBT
+PЗадание 16 (без удаления контакта из группы)
++web-application (7.6 не до конца)
+
+<Лекция 7.6. Связи между объектами
+&web-application (7.5 Groups/Contacts)
+
+>Лекция 7.5. Отключаемые проверки UI
+"web-application (7.4, example 15)
+
+UЛекция 7.4. Сравнение данных, загруженных из БД
+'web-application (7.4 HbConnectionTest)
+
+UЛекция 7.4. Сравнение данных, загруженных из БД
+'web-application (7.2 HbConnectionTest)
+
+3Лекция 7.2. Object Relational Mapping (ORM)
+'web-application (7.2 HbConnectionTest)
+
+3Лекция 7.2. Object Relational Mapping (ORM)
+#web-application (6.11 logback.xml)
+
+IЛекция 6.11. Протоколирование (лог-файлы)
+"Delete gradle-wrapper.properties
+Delete gradle-wrapper.jar
+/web-application (6.10 testng-groups/-contacts)
+
+^Лекция 6.10. Описание конфигурации тестового стенда
+/web-application (6.10 testng-groups/-contacts)
+
+^Лекция 6.10. Описание конфигурации тестового стенда
+web-application
+9web-application (Лекция 6.9 testng-group/-contact)
+
+wЛекция 6.9. Конфигурационные файлы для описания тестовых наборов
+web-application
+web-application
+$web-application (Лекция 6.9.)
+
+wЛекция 6.9. Конфигурационные файлы для описания тестовых наборов
+#web-application (Лекция 6.9)
+
+wЛекция 6.9. Конфигурационные файлы для описания тестовых наборов
+1web-application (Лекция 6.8 Group/Contact)
+
+tЛекция 6.8. Автоматическое закрытие файлов после использования
+web-application (Xml)
+
+(Задание 12 и задание 13
+9web-application (Лекция 6.6 Group/ContactCreation)
+
+$Лекция 6.6. Формат XML
+9web-application (Лекция 6.5 Group/ContactCreation)
+
+RЛекция 6.5. Загрузка тестовых данных из файла
+9web-application (Лекция 6.4 Group/ContactCreation)
+
+PЛекция 6.4. Параметризация тестовых методов
+1Delete addressbook-web-tests/src/test directory
+9web-application (Лекция 6.4 Group/ContactCreation)
+
+PЛекция 6.4. Параметризация тестовых методов
+)web-application (error ContactCreation)
+)web-application (error ContactCreation)
+9web-application (Лекция 6.4 Group/ContactCreation)
+
+PЛекция 6.4. Параметризация тестовых методов
+8web-application (Лекция 6.4. GroupsCreationTests)
+
+PЛекция 6.4. Параметризация тестовых методов
+3web-application (Лекция 6.3. Group, Contact)
+
+�Лекция 6.3. Анализ опций командой строки при запуске генератора данных
++web-application (Лекция 6.3. Groups)
+
+oАнализ опций командой строки при запуске генератора данных
+8web-application (Лекция 6.2.  (Groups, Contacts))
+
+YГенератор тестовых данных, запись данных в файл
+%web-application (Задание 11)
+7web-application (Лекция 6.2. Генератор)
+
+Z Генератор тестовых данных, запись данных в файл
+%web-application (Задание 11)
+=web-application (Лекция 5.11. Клеим строки)
+
+.Метод обратных проверок
+/web-application (5.10 Режем строки)
+
+oЛекция 5.10. Режем строки (и немного про регулярные выражения)
+FСпособы построения сложных локаторов
+
+ (5.9 contactPhoneTests)
+KХеширование и предварительные проверки
+web-application
+web-application
+web-application
+web-application
+web-application
+web-application
+web-application
+web-application
+
+zПовсеместное использование уникальных идентификаторов объектов
+web-application
+web-application
+web-application
+web-application
+web-application
+web-application
+web-application
+web-application
+web-application
+web-application
+web-application
+web-application
+web-application
+web-application
+web-application
+web-application
+web-application
+web-application
+web-application
+web-application
+web-application
+web-application
+web-application
+Delete TestBaseContact.java
+"Delete SessionHelperContact.java
+Delete NavigationContact.java
+Delete ContactBase.java
+web-application
+web-application
+web-application
+web-application
+web-application
+web-application
+web-application
+VКоллекции: наборы элементов (массивы и списки)
+.Merge remote-tracking branch 'origin/master'
+[Циклы: многократные повторения похожих действий
+Web-application
+
+XПроверка и обеспечение выполнения предусловий
+Web-application
+
+XПроверка и обеспечение выполнения предусловий
+Web-application
+
+XПроверка и обеспечение выполнения предусловий
+Web-applicationa
+
+TДобавлена проверка кнопки возвращение домой
+Web-application
+
+.Проверка наличия кнопки
+Web-application
+
+�Добавление метода, который проверяет наличие или отсутствие выпадающего списка Group
+'Delete ApplicationManagerContact.java
+web-application
+web-application
+web-application
+-Изменения в версии selenium
+.Merge remote-tracking branch 'origin/master'
+%Сравнение eguals или ==
+Web-application
+.Merge remote-tracking branch 'origin/master'
+)Квадратное уравнение
+Web-application
+web-application
+web-application
+web-application
+Web-application
+Add files via upload
+Delete TestBaseContact.java
+"Delete ContactDeletionTests.java
+Delete ContactData.java
+"Delete ContactCreationTests.java
+Веб-приложение
+Delete TestBase.java
+ Delete GroupDeletionTests.java
+ Delete GroupCreationTests.java
+Delete GroupData.java
+Веб-приложение
+Веб-приложение
+Веб-приложение
+Веб-приложение
+Веб-приложение
+Delete testBaseContact.java
+Add files via upload
+Add files via upload
+Add files via upload
+4Delete test/java/ru/stqa/pft/addressbook directory
+Add files via upload
+Веб-приложение
+Web-tests
+Веб-приложение
+Веб-приложение
+Веб-приложение
+Веб-приложение
+QТесты по проверке расстояния между точками
+QТесты по проверке расстояния между точками
+Квадрат
+;Расстояние между двумя точками
+;Расстояние между двумя точками
+;Расстояние между двумя точками
+6Добавлено несколько функций
+6Добавлено несколько функций
+(Моя первая программа
+(Выражения и операции
+Hello World
+(Выражения и операции
+NИзменение привязки проекта к репозиторию
+Initial commit
