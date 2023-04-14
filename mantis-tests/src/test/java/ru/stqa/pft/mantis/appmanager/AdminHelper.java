@@ -32,7 +32,7 @@ public class AdminHelper extends HelperBase{
   //Все юзеры на странице
   public Users allUsers() {
     Users users = new Users();
-    List<WebElement> elements = wd.findElements(By.xpath("//tr[contains(@class,'row-')]"));
+    List<WebElement> elements = wd.findElements(By.xpath("//tr"));
     elements.remove(0);
     for (WebElement element : elements) {
       List<WebElement> cells = element.findElements(By.tagName("td"));
@@ -49,7 +49,6 @@ public class AdminHelper extends HelperBase{
 
   public void changePassword(User user) {
     click(By.linkText(user.getUserName()));
-    click(By.cssSelector("input[value='Reset Password']"));
-    click(By.linkText("Proceed"));
+    click(By.cssSelector("input[value='Сбросить пароль']"));
   }
 }

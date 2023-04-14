@@ -12,7 +12,7 @@ public class Issue {
     return id;
   }
 
-  public Issue withtId(int id) {
+  public Issue withId(int id) {
     this.id = id;
     return this;
   }
@@ -21,7 +21,7 @@ public class Issue {
     return summary;
   }
 
-  public Issue withtSummary(String summary) {
+  public Issue withSummary(String summary) {
     this.summary = summary;
     return this;
   }
