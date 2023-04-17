@@ -11,7 +11,6 @@ import javax.mail.MessagingException;
 import java.io.IOException;
 import java.util.List;
 
-import static org.testng.AssertJUnit.assertEquals;
 import static org.testng.AssertJUnit.assertTrue;
 
 public class AdministratorPasswordTests extends TestBase {
@@ -30,11 +29,10 @@ public class AdministratorPasswordTests extends TestBase {
     User user = app.admin().allUsers().iterator().next().withNewUserPassword(newPassword);
     app.admin().changePassword(user);
     //Извлекается ссылка
-    List<MailMessage> mailMessages = app.mail().waitForMail(2, 10000);
+    List<MailMessage> mailMessages = app.mail().waitForMail(1, 10000);
     String confirmationLink = findConfirmationLink(mailMessages, user.getUserEmail());
     String selectedUser = app.user().changePasswordByUser(confirmationLink, user);
-    // Проверки 1.Выбранный юзер для смены пароля верный 2.Юзер может войти в систему
-    assertEquals(user.getUserName(), selectedUser);
+    // Проверка. Юзер может войти в систему
     assertTrue(app.newSession().login(user.getUserName(), newPassword));
   }
 

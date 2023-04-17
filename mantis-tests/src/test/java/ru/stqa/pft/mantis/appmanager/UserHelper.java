@@ -11,10 +11,11 @@ public class UserHelper extends HelperBase {
 
   public String changePasswordByUser(String url, User user) {
     wd.get(url);
-    String selectedUser = wd.findElement(By.cssSelector("[class='login-info-left'] .italic")).getText();
+    String selectedUser = wd.findElement(By.cssSelector("[class='form-control']")).getText();
+    type(By.name("realname"), user.getUserName());
     type(By.name("password"), user.getNewUserPassword());
     type(By.name("password_confirm"), user.getNewUserPassword());
-    click(By.cssSelector("input[value='Update User']"));
+    click(By.cssSelector("span[class='submit-button'] button"));
     return selectedUser;
   }
 }
