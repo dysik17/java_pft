@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="ru.stqa.pft.sandbox.PointTests" tests="5" skipped="0" failures="0" errors="0" timestamp="2023-04-05T18:20:17" hostname="BEST-KOMP" time="0.02">
+  <properties/>
+  <testcase name="distanceTest1()" classname="ru.stqa.pft.sandbox.PointTests" time="0.012"/>
+  <testcase name="distanceTest2()" classname="ru.stqa.pft.sandbox.PointTests" time="0.002"/>
+  <testcase name="distanceTest3()" classname="ru.stqa.pft.sandbox.PointTests" time="0.001"/>
+  <testcase name="distanceTest4()" classname="ru.stqa.pft.sandbox.PointTests" time="0.001"/>
+  <testcase name="distanceTest5()" classname="ru.stqa.pft.sandbox.PointTests" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
