@@ -24,6 +24,13 @@ public class AddingContactGroupTests extends TestBase{
               .withTelephoneMobile("+7(915)8009090").withEmail("privet@mail.ru"));
       app.goTo().homePage();
     }
+    if (app.db().groups().size() == 0) {
+      Date date = new Date();
+      SimpleDateFormat formatDate = new SimpleDateFormat("dd-MM-yyyy-hh-mm-ss");
+      GroupData newGroup = new GroupData().withName("Группа" + formatDate.format(date)).
+              withFooter("footer").withHeader("header");
+      createGroup(newGroup);
+    }
   }
 
   @Test
