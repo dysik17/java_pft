@@ -9,6 +9,7 @@ import ru.stqa.pft.addressbook.model.Groups;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
+import static java.util.Comparator.naturalOrder;
 import static java.util.stream.Collectors.toList;
 import static org.hamcrest.CoreMatchers.equalTo;
 import static org.hamcrest.MatcherAssert.assertThat;
@@ -63,12 +64,9 @@ public class AddingContactGroupTests extends TestBase{
     }
 
     Groups afterAdd = app.db().contacts().iterator().next().getGroups();
-    System.out.println(afterAdd);
-    System.out.println(beforeAdd);
-    System.out.println(beforeAdd.withAdded(group));
     assertThat(afterAdd.size(), equalTo(beforeAdd.size()));
-    assertThat(afterAdd.stream().map(GroupData::getName).collect(toList()),
-            equalTo(beforeAdd.withAdded(group).stream().map(GroupData::getName).collect(toList())));
+    assertThat(afterAdd.stream().map(GroupData::getName).sorted(naturalOrder()).collect(toList()),
+            equalTo(beforeAdd.withAdded(group).stream().map(GroupData::getName).sorted(naturalOrder()).collect(toList())));
   }
 
   private static void addContactToFreeGroup(ContactData contact, Groups beforeAdd, Groups groups, GroupData group) {
